@@ -1,4 +1,5 @@
 
+
 body {
     margin: 0;
     font-family: Georgia, serif;
@@ -13,6 +14,8 @@ main {
 }
 
 
+
+
 header {
     position: sticky;
     top: 0;
@@ -25,7 +28,6 @@ header {
     z-index: 100;
 }
 
-
 .logo {
     color: black;
     font-size: 28px;
@@ -33,9 +35,13 @@ header {
     font-weight: bold;
 }
 
+
+
 .section-home {
     padding: 30px;
 }
+
+
 
 
 nav a {
@@ -54,6 +60,10 @@ nav a:last-child {
 nav a:hover {
     color: #B30B0B;
 }
+nav a.active {
+    color: #B30B0B;
+}
+
 
 
 .gallery {
@@ -65,14 +75,30 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+
+.gallery .item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.gallery .item p {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
 .gallery img {
     width: 100%;
-    height: 260px;           
-    object-fit: cover;       
+    height: 260px;
+    object-fit: cover;
     border: 2px solid #333;
     border-radius: 4px;
     background-color: #ddd;
 }
+
+
 
 
 .content {
@@ -89,16 +115,18 @@ nav a:hover {
 
 
 
-
 .contatti {
     flex-direction: column;
-    text-align:left;
+    text-align: left;
 }
 
 .contatti-img {
     width: 350px;
     margin-bottom: 20px;
 }
+
+
+
 
 .progetto-dettaglio {
     padding: 40px;
@@ -120,31 +148,39 @@ nav a:hover {
 }
 
 
+
+
 @media (max-width: 700px) {
+
     header {
         flex-direction: column;
         align-items: center;
         padding: 10px 0;
     }
 
-    header h1 {
-        margin-bottom: 10px;
+    nav a {
+        margin: 10px;
+        border-right: none;
+        padding-right: 0;
+        font-size: 16px;
+    }
+
+    .progetto-dettaglio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progetto-immagine {
+        width: 100%;
+    }
+
+    .progetto-testo {
+        max-width: 90%;
         text-align: center;
-        font-size: 1.6rem;
-    }
-
-    nav ul {
-        flex-direction: row;   
-        flex-wrap: wrap;       
-        justify-content: center;
-        gap: 15px;
-    }
-
-    nav ul li a {
-        font-size: 1rem;
-        padding: 6px 10px;
     }
 }
+
+
 
 
 footer {
