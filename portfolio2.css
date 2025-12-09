@@ -1,0 +1,156 @@
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: #faf7f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    background: #f2e7dc;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #000;
+    z-index: 100;
+}
+
+
+.logo {
+    color: black;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-home {
+    padding: 30px;
+}
+
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    border-right: 2px solid black;
+    padding-right: 20px;
+}
+
+nav a:last-child {
+    border-right: none; 
+}
+
+nav a:hover {
+    color: #B30B0B;
+}
+
+
+.gallery {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.gallery img {
+    width: 100%;
+    height: 260px;           
+    object-fit: cover;       
+    border: 2px solid #333;
+    border-radius: 4px;
+    background-color: #ddd;
+}
+
+
+.content {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.content img {
+    max-width: 90%;
+    border: 1px solid #333;
+}
+
+
+
+
+
+.contatti {
+    flex-direction: column;
+    text-align:left;
+}
+
+.contatti-img {
+    width: 350px;
+    margin-bottom: 20px;
+}
+
+.progetto-dettaglio {
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.progetto-immagine {
+    width: 45%;
+    max-width: 800px;
+    border: 2px solid #333;
+    object-fit: cover;
+}
+
+.progetto-testo {
+    max-width: 500px;
+}
+
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: row;   
+        flex-wrap: wrap;       
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+}
+
+
+footer {
+    background: #f2e7dc;
+    padding: 10px;
+    text-align: left;
+    border-top: 3px solid #000;
+    margin-top: auto;
+}
